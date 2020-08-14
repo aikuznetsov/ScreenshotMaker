@@ -1,0 +1,19 @@
+group 'ScreenshotMaker'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'http://repository.jspresso.org/maven2/' }
+    maven { url 'https://repo.spring.io/plugins-release' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'ru.yandex.qatools.ashot', name: 'ashot', version: '1.5.4'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.12.0'
+    compile group: 'javaxt', name: 'javaxt-core', version: '1.7.8'
+}
