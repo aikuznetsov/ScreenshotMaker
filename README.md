@@ -1,6 +1,6 @@
 # ScreenshotMaker
 
-General goal: automaticly taking screenshots from web pages.
+General goal: automatically taking screenshots from web pages.
 
 **Ran script**
 
