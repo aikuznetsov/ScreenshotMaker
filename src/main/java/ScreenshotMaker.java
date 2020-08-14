@@ -24,6 +24,12 @@ public class ScreenshotMaker {
         this.index = 0;
     }
 
+    public ScreenshotMaker(ChromeDriver driver, FolderManager folderManager, int index) {
+        this.driver = driver;
+        this.folderManager = folderManager;
+        this.index = index;
+    }
+
     public ScreenshotMaker openUrl(String url, int timeOut) {
         index++;
         System.out.println(index + ". Take screenshot by: " + url);
@@ -44,7 +50,7 @@ public class ScreenshotMaker {
                 for (WebElement element : elements) {
                     String positionValue = element.getCssValue("position");
                     System.out.println("xPath: " + xPath + ", positionValue: " + positionValue);
-                    if (xPath.contains("wrapper") || (positionValue.equals("fixed"))) {
+                    if (xPath.contains("wrapper") ||  xPath.contains("4ijl")    || (positionValue.equals("fixed"))) {
                         JavascriptExecutor js = (JavascriptExecutor) driver;
                         js.executeScript("arguments[0].setAttribute('style', 'margin-left:auto')", element);
                         js.executeScript("arguments[0].setAttribute('style', 'margin-right:auto')", element);
