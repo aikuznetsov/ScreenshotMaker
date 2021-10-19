@@ -25,7 +25,7 @@ public class Main {
                 .getUrlList();
 
         driver = new ChromeDriver();
-        driver.manage().window().setSize(new Dimension(1700, 1150));
+        driver.manage().window().setSize(new Dimension(1000, 1150));
 
         ScreenshotMaker screenshotMaker = new ScreenshotMaker(driver, folderManager);
 
